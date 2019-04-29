@@ -16,7 +16,7 @@ namespace hopeproject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmView());
+            Application.Run(new frmLogin());
         }
     }
 }
