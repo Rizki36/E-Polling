@@ -40,8 +40,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel_container = new System.Windows.Forms.Panel();
-            this.userControlOption1 = new hopeproject.UserControlOption();
             this.userControlStatistika1 = new hopeproject.UserControlStatistika();
+            this.userControlOption1 = new hopeproject.UserControlOption();
             this.UserControlPesertaLomba1 = new hopeproject.UserControlPesertaLomba();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -265,16 +265,6 @@
             this.panel_container.Size = new System.Drawing.Size(819, 486);
             this.panel_container.TabIndex = 2;
             // 
-            // userControlOption1
-            // 
-            this.userControlOption1.BackColor = System.Drawing.Color.White;
-            this.userControlOption1.ForeColor = System.Drawing.Color.Gray;
-            this.userControlOption1.Location = new System.Drawing.Point(24, -6);
-            this.userControlOption1.Name = "userControlOption1";
-            this.userControlOption1.Size = new System.Drawing.Size(576, 489);
-            this.userControlOption1.TabIndex = 5;
-            this.userControlOption1.TabStop = false;
-            // 
             // userControlStatistika1
             // 
             this.userControlStatistika1.BackColor = System.Drawing.Color.White;
@@ -284,6 +274,16 @@
             this.userControlStatistika1.TabIndex = 4;
             this.userControlStatistika1.TabStop = false;
             this.userControlStatistika1.Load += new System.EventHandler(this.userControlStatistika1_Load);
+            // 
+            // userControlOption1
+            // 
+            this.userControlOption1.BackColor = System.Drawing.Color.White;
+            this.userControlOption1.ForeColor = System.Drawing.Color.Gray;
+            this.userControlOption1.Location = new System.Drawing.Point(24, -6);
+            this.userControlOption1.Name = "userControlOption1";
+            this.userControlOption1.Size = new System.Drawing.Size(576, 489);
+            this.userControlOption1.TabIndex = 5;
+            this.userControlOption1.TabStop = false;
             // 
             // UserControlPesertaLomba1
             // 

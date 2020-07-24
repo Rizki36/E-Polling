@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 using MetroFramework.Forms;
 using MetroFramework;
@@ -15,10 +16,30 @@ using System.Threading;
 namespace hopeproject
 {
     public partial class frmLogin : Form
-    { 
+    {
+        private string admin;
+        private string passAdmin;
+        private string user;
+        private string passUser;
+        List<string> userPass = new List<string>();
         public frmLogin()
         {
             InitializeComponent();
+            int counter = 0;
+            string line;
+
+            // Read the file and display it line by line.  
+            System.IO.StreamReader file = new System.IO.StreamReader(@"pass.txt");
+            while ((line = file.ReadLine()) != null)
+            {
+                userPass.Add(line); 
+                counter++;
+            }
+            file.Close();
+            admin = userPass[1];
+            passAdmin = userPass[3];
+            user = userPass[5];
+            passUser = userPass[7];
         }
         
         private void openFrmAdmin()
@@ -61,7 +82,7 @@ namespace hopeproject
                 //login admin
                 if (btnAdmin.Enabled == false)
                 {
-                    if (tbUser.Text == "admin" && tbPassword.Text == "admin")
+                    if (tbUser.Text == admin && tbPassword.Text == passAdmin)
                     {
                         Form admin = new frmAdmin2();
                         admin.Owner = this;
@@ -79,7 +100,7 @@ namespace hopeproject
                 //login user
                 if (btnUser.Enabled == false)
                 {
-                    if (tbUser.Text == "user" && tbPassword.Text == "user")
+                    if (tbUser.Text == user && tbPassword.Text == passUser)
                     {
                         Form user = new frmUser2();
                         user.Owner = this;
