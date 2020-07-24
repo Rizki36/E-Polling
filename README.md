@@ -1,4 +1,4 @@
-# E-BALLOT
+# E-POLLING / E-BALLOT
 Aplikasi poling paskib
 - Targat Platform : Desktop
 - Bahasa Pemrograman : C#
